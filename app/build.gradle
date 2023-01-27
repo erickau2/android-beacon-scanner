@@ -21,9 +21,9 @@ android {
     signingConfigs {
         release {
             keyAlias 'BeaconScannerKey'
-            keyPassword beacon_scanner_key_password
-            storeFile file(beacon_scanner_store_file)
-            storePassword beacon_scanner_store_password
+//            keyPassword beacon_scanner_key_password
+//            storeFile file(beacon_scanner_store_file)
+//            storePassword beacon_scanner_store_password
         }
     }
 
@@ -50,6 +50,8 @@ ext {
 }
 
 dependencies {
+    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.multidex:multidex:2.0.1'
